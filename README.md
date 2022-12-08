@@ -7,7 +7,16 @@ API для сенсоров
 
 
 docker build -t exam-sensor .
+
 docker compose up
+
+
+Run if exists php
+
+cd sensor-app
+
+php -S 0.0.0.0:8000 -t public
+
 
 GET: 
 (получение всех сенсоров)
