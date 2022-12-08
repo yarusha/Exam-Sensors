@@ -5,18 +5,13 @@ API для сенсоров
 3. Получение до n последних результатов (n задается при создании или изменении сенсора)
 4. Автоматическая чистка "лишних" (старых) результатов
 
-Run:
-docker build -t exam-sensor .
 
-docker run -p 8000:8000 -v /Users/yarusha/Works/Personal/ExamFullStack/sensor-app:/sensor-app --rm exam-sensor-new
+docker build -t exam-sensor-api .
+
+
+docker run -p 8000:8000 --rm exam-sensor-api
 
 #docker compose up
-
-Run if exists php
-
-cd sensor-app
-
-php -S 0.0.0.0:8000 -t public
 
 GET: 
 (получение всех сенсоров)

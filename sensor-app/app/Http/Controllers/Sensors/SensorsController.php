@@ -32,7 +32,11 @@ class SensorsController extends Controller
      * @return array
      */
     public function getSensor($id) {
-        return $this->sensorsModel->getSensorWithParamsById($id);
+        try {
+            return $this->sensorsModel->getSensorWithParamsById($id);
+        } catch (\Exception $e) {
+            return Responses::badResponse($e->getMessage(), $e->getCode());
+        }
     }
 
     public function deleteSensor($id) {
@@ -52,7 +56,11 @@ class SensorsController extends Controller
         $this->initParams(
             $this->validate($request, $this->validator->getRulesUpdateSensor())
         );
-        return ['result'=>$this->sensorsModel->updateSensor($id, $this->data)];
+        try {
+            return ['result' => $this->sensorsModel->updateSensor($id, $this->data)];
+        } catch (\Exception $e) {
+            return Responses::badResponse($e->getMessage(), $e->getCode());
+        }
     }
 
     /**
