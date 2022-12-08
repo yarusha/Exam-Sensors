@@ -7,6 +7,8 @@ API для сенсоров
 
 
 docker build -t exam-sensor .
+
+
 docker compose up
 
 GET: 
