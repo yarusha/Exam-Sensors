@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./sensor-app:/sensor-app
+#  postgres:
+#    image: postgres
+#    environment:
+#      POSTGRES_USER: sensor
+#      POSTGRES_PASSWORD: some-password
+#      PGDATA: /data/postgres
+#    ports:
+#      - "5432:5432"
+#    restart: unless-stopped
+#    depends_on:
+#      - web
