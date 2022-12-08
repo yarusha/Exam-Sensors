@@ -105,21 +105,6 @@ class SensorsModel
     public function getSensorWithParamsById(int $id) : array {
         return $this->getSensor($id) + ['params'=>$this->getSensorParamsById($id)];
     }
-//
-//    /**
-//     * @param int $id
-//     * @return array
-//     */
-//    public function getSensorsWithParams() : array {
-//        $result = $this->sensors->from($this->sensors->getTable(), 'sensors')
-//            ->leftJoin($this->sensorParams->getTable() . ' as sensor_params',
-//                'sensors.id', '=', 'sensor_params.sensor_id'
-//            )
-//            ->get([
-//                'sensors.id', 'sensors.name', 'sensors.count_params', 'sensor_params.value'
-//            ]);
-//        dd($result->toArray());
-//    }
 
     /**
      * @param int $id
