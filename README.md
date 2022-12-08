@@ -8,7 +8,9 @@ API для сенсоров
 Run:
 docker build -t exam-sensor .
 
-docker compose up
+docker run -p 8000:8000 -v /Users/yarusha/Works/Personal/ExamFullStack/sensor-app:/sensor-app --rm exam-sensor-new
+
+#docker compose up
 
 Run if exists php
 
