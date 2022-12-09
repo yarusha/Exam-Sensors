@@ -81,7 +81,7 @@ class SensorsModel
             $this->clearParamsIfNeededBySensorId($id);
             return $result;
         }
-        throw new \Exception('Sensor id: {$id} not found', 404);
+        throw new \Exception("Sensor id: {$id} not found", 404);
 
     }
 
@@ -135,7 +135,7 @@ class SensorsModel
             $this->clearParamsIfNeededBySensorId($id);
             return $result;
         }
-        throw new \Exception('Sensor id: {$id} not found', 404);
+        throw new \Exception("Sensor id: {$id} not found", 404);
     }
 
     /**
