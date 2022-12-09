@@ -42,7 +42,7 @@ class SensorsModel
             ->first([
                 'id', 'name', 'count_params'
             ]);
-        return $result ? $result->toArray() : throw new Exception("Sensor by id: {$id} not found");
+        return $result ? $result->toArray() : throw new Exception("Sensor by id: {$id} not found", 404);
     }
 
     /**

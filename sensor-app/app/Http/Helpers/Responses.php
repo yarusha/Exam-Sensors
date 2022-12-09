@@ -10,10 +10,9 @@ namespace App\Http\Helpers;
 class Responses
 {
     public static function badResponse(string $message, int $code = 400) {
-        http_response_code($code);
-        return [
+        return response()->json([
             'status' => 'error',
             'message' => $message
-        ];
+        ], $code);
     }
 }
